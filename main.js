@@ -1,1 +1,1 @@
-alert (Hola Cómo estas ?);
+alert ("Hola como va?");
