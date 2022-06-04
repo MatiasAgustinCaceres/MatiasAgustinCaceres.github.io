@@ -335,6 +335,11 @@ h3.my-profession {
     margin: 15px 0;
 }
 
+h4.home-download {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
 .typing {
     color: var(--skin-color);
 }
@@ -411,19 +416,20 @@ h3.my-profession {
 }
 
 .about .about-content .personal-info {
-    flex: 0 0 60%;
-    max-width: 60%;
+    flex: 0 0 50%;
+    max-width: 50%;
     margin-top: 40px;
 }
 
 .about .about-content .personal-info .info-item {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align-last: center;
 }
 
 .about .about-content .personal-info .info-item p {
     font-weight: 600;
-    padding: 10px 0;
+    padding: 22px 0;
     font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
@@ -445,8 +451,8 @@ h3.my-profession {
 }
 
 .about .about-content .skills {
-    flex: 0 0 40%;
-    max-width: 40%;
+    flex: 0 0 50%;
+    max-width: 50%;
     margin-top: 40px;
 }
 
