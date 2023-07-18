@@ -582,6 +582,14 @@ h4.home-download {
     color: var(--text-black-700);
 }
 
+.about .about-content .timeline .timeline-text-2 {
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--text-black-700);
+    text-indent: 2em;
+}
+
 /* ---------------------------------- portfolio ----------------------------------*/
 .portfolio .container {
     padding-bottom: 40px;
