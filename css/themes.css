@@ -1,0 +1,31 @@
+:root {
+
+  --primary-color: #3b82f6;
+
+  --background-color: #ffffff;
+  --surface-color: #f1f5f9;
+
+  --text-color: #0f172a;
+  --text-secondary: #475569;
+
+  --border-color: #e2e8f0;
+
+  --shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+.dark-theme {
+
+  --background-color: #020617;
+  --surface-color: #0f172a;
+
+  --text-color: #f8fafc;
+  --text-secondary: #cbd5e1;
+
+  --border-color: #1e293b;
+
+  --shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4);
+
+}

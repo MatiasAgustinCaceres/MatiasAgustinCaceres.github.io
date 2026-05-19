@@ -3,497 +3,569 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matías Agustín Cáceres</title>
+  <meta charset="UTF-8" />
 
-  <script src="https://kit.fontawesome.com/65d1811598.js" crossorigin="anonymous"></script>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-  <!--------------- CSS Files ------------------>
-  <link rel="stylesheet" href="Css/style_sheet.css">
-  <link rel="stylesheet" href="Css/Skins/color-1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>Matías Cáceres | Portfolio</title>
 
-  <!--------------- Style Switcher ------------------>
-  <link rel="stylesheet" href="Css/Skins/color-1.css" class="alternate-style" title="color-1" disabled>
-  <link rel="stylesheet" href="Css/Skins/color-2.css" class="alternate-style" title="color-2" disabled>
-  <link rel="stylesheet" href="Css/Skins/color-3.css" class="alternate-style" title="color-3" disabled>
-  <link rel="stylesheet" href="Css/Skins/color-4.css" class="alternate-style" title="color-4" disabled>
-  <link rel="stylesheet" href="Css/Skins/color-5.css" class="alternate-style" title="color-5" disabled>
-  <link rel="stylesheet" href="Css/style-switcher.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/themes.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="./css/responsive.css">
 
 </head>
 
 <body>
 
-  <!--------------- Main Container Start ------------------>
-  <div class="main-container">
+  <!-- HEADER -->
+  <header class="header">
 
-    <!--------------- Aside Start ------------------>
-    <div class="aside">
+    <nav class="navbar container">
 
-      <div class="logo">
-        <a href="https://github.com/MatiasAgustinCaceres/MatiasAgustinCaceres.github.io" target="_blank">
-          <span>M</span>atías </a>
-      </div>
+      <!-- LOGO -->
+      <a href="#" class="logo">
+        Matías Cáceres
+      </a>
 
-      <div class="nav-toggler">
-        <span></span>
-      </div>
+      <!-- NAVIGATION -->
+      <ul class="nav-links">
 
-      <ul class="nav">
-        <li> <a href="#home" class="active"> <i class="fa fa-home"></i> Home</a> </li>
-        <li> <a href="#about"> <i class="fa fa-user"></i> About me</a> </li>
-        <li> <a href="#portfolio"> <i class="fa fa-briefcase"></i> Portfolio</a> </li>
-        <li> <a href="#contact"> <i class="fa fa-comments"></i> Contact</a> </li>
+        <li>
+          <a href="#about">About Me</a>
+        </li>
+
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+          <a href="#education">Education</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
       </ul>
 
+      <!-- THEME BUTTON -->
+      <button
+        id="theme-toggle"
+        class="theme-btn"
+      >
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+
+    <div class="hero-content">
+
+      <p class="subtitle">
+        Software Developer
+      </p>
+
+      <h1>
+        Hi, I'm
+        <span>Matías Cáceres</span>
+      </h1>
+
+      <p class="hero-description">
+
+        Passionate developer focused on building modern,
+        scalable and user-friendly applications.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#contact"
+          class="btn primary-btn"
+        >
+          Contact Me
+        </a>
+
+        <a href="./assets/files/Resume 2026.pdf" class="btn secondary-btn" target="_blank"> Resume </a>
+
+      </div>
+
     </div>
-    <!--------------- Aside End -------------------->
 
-    <!--------------- Main Content Start ------------------>
-    <div class="main-content">
+    <!-- PROFILE IMAGE -->
+    <div class="hero-image">
 
-      <!--------------- Home Section Start ----------------->
-      <section class="home active section" id="home">
+      <img
+        src="./assets/images/profile.jpg"
+        alt="Profile Image"
+      >
 
-        <div class="container">
+    </div>
 
-          <div class="row">
+  </section>
 
-            <div class="home-info padd-15">
-              <h3 class="hello"> Hello, my name is <span class="name">Matías Cáceres</span></h3>
-              <h3 class="my-profession">I am a <span class="typing"></span></h3>
-              <p> I am a computer engineering student at the University of Buenos Aires (UBA).
-                I am passionate about technology and my goal is to learn and grow professionally in software
-                development.</p>
-              <h4 class="home-download">Download my CV :</h4>
-              <a download="" href="/Contenido multimedia/Pdfs/Matías Cáceres Resume 2023.pdf" class="btn">English Version</a>
-              <a download="" href="/Contenido multimedia/Pdfs/Matías Cáceres CV 2023.pdf" class="btn">Spanish Version</a>
-            </div>
+  <!-- ABOUT -->
+  <section
+    id="about"
+    class="section container"
+  >
 
-            <div class="home-img padd-15">
-              <img src="./Contenido multimedia/Imgs/Foto perfil.jpg" alt="">
-            </div>
+    <h2 class="section-title">
+      About Me
+    </h2>
 
-          </div>
+    <div class="card">
+
+      <p>
+
+        I am an Software Engineering student at
+        the University of Buenos Aires (UBA) with experience
+        in software development and business solutions.
+
+        Throughout my professional journey, I have worked as
+        a Packaged App Development Analyst at Accenture and
+        as a Full-Stack Developer at Penta Consulting,
+        participating in the development of modern applications,
+        integrations, and scalable solutions.
+
+        I am currently looking for opportunities where I can
+        continue learning, take on new challenges, and grow
+        professionally within collaborative and innovative teams.
+
+        I consider myself a proactive, responsible, and
+        collaborative person, always focused on continuous
+        improvement and delivering high-quality solutions.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section
+    id="experience"
+    class="section container"
+  >
+
+    <h2 class="section-title">
+      Experience
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <h3>
+          Packaged App Development in Accenture
+        </h3>
+
+        <span>
+          October 2023 - Present
+        </span>
+
+        <p>
+
+          During my time at Accenture, I was part of the
+          BTP RAP and BTP Integrations teams.
+
+          In both teams, I worked using agile methodologies
+          (Scrum), actively participating in sprints,
+          reviews, and incremental releases.
+
+          I was also responsible for researching tools aimed
+          at improving team productivity and ways to integrate
+          Artificial Intelligence to optimize tasks,
+          automate processes, and improve efficiency in
+          development and integration activities.
+
+        </p>
+
+        <!-- BTP RAP -->
+        <div class="experience-group">
+
+          <h4>
+            BTP RAP
+          </h4>
+
+          <ul>
+
+            <li>
+              Fiori application development using the
+              ABAP RESTful Application Programming Model (RAP)
+            </li>
+
+            <li>
+              Development of database queries for information
+              management and service presentation
+            </li>
+
+          </ul>
 
         </div>
 
-      </section>
-      <!--------------- Home Section End ------------------->
+        <!-- BTP Integrations -->
+        <div class="experience-group">
 
-      <!--------------- About Section Start ------------------>
-      <section class="about section" id="about">
+          <h4>
+            BTP Integrations
+          </h4>
 
-        <div class="container">
+          <ul>
 
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>About me</h2>
-            </div>
-          </div>
+            <li>
+              Design and maintenance of integrations between
+              SAP and non-SAP systems using SAP Integration Suite
+            </li>
 
-          <div class="row">
-            <div class="about-content padd-15">
+            <li>
+              Application of service-oriented architecture
+              (SOA) principles
+            </li>
 
-              <div class="row">
-                <div class="about-text padd-15">
-                  <h3>Hello! My name is Matías Agustín Cáceres. I am currently looking to learn and grow into
-                    <span>software development.</span></h3>
-                  <p>I am a proactive, organized and responsible person. I am currently looking to gain more knwoledge and exprerience in
-                  software depelopment. Throughout my years as a studen, I have worked with the following programming languages: C/C++  and  
-                  Java. Apart from this I have taken a course on Full Stack development. I recently worked at Penta
-                  Consulting S.A. Where I got experience and was able to deepen my knowledge in software development.</p>
-                </div>
-              </div>
-
-              <div class="row">
-
-                <div class="education padd-15">
-
-                  <h3 class="title">Education</h3>
-
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-
-                      <div class="timeline shadow-dark">
-
-                        <!--------------- Time line item ------------------>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2017 - Present
-                          </h3>
-                          <h4 class="timeline-title">Degree</h4>
-                          <p class="timeline-text">Computer Engineering Buenos Aires University. </p>
-                        </div>
-
-                        <!--------------- Time line item ------------------>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> August 2021 - December 2021
-                          </h3>
-                          <h4 class="timeline-title">Codo A Codo 4.0 Full Stack course</h4>
-                          <p class="timeline-text">Ministry of Education Buenos Aires City.</p>
-                        </div>
-
-                        <!--------------- Time line item ------------------>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2010 - 2015
-                          </h3>
-                          <h4 class="timeline-title">Bachelor of Exact Sciences</h4>
-                          <p class="timeline-text">Mater Ter Admirabilis Institute.
-                          </p>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="experience padd-15">
-
-                  <h3 class="title">Experience</h3>
-
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-
-                      <div class="timeline shadow-dark">
-
-                        <!--------------- Time line item ------------------>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> October 2022 - May 2023
-                          </h3>
-                          <h4 class="timeline-title">FullStack Developer at Penta Consulting</h4>
-                          <p class="timeline-text">- Management and customization of Microsoft CRM.</p>
-                          <p class="timeline-text">- Frontend Development (JavaScript):</p>
-                          <p class="timeline-text-2">Interface customization.</p>
-                          <p class="timeline-text-2">Fetch and Odata responses.</p>
-                          <p class="timeline-text">- Backend Development (C#):</p>
-                          <p class="timeline-text-2">Database queries.</p>
-                          <p class="timeline-text-2">Plugin development.</p>
-                          <p class="timeline-text-2">Console development</p>
-  
-                        </div>
-
-                        <!--------------- Time line item ------------------>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> August 2015 - September 2015
-                          </h3>
-                          <h4 class="timeline-title">Internship in administrative sector at Securitas Argentina S.A.</h4>
-                          <p class="timeline-text">-Data upload and validation.</p>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="row">
-
-                <div class="skills padd-15">
-
-                  <h3 class="title">Skills</h3>
-
-                  <div class="row">
-
-                    <div class="skill-item padd-15">
-                      <h5>English</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 80%;"></div>
-                        <div class="skill-percent">80%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>C/C++</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>Java</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 25%;"></div>
-                        <div class="skill-percent">25%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>Python</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 25%;"></div>
-                        <div class="skill-percent">25%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>MySQL</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 25%;"></div>
-                        <div class="skill-percent">25%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>JavaScript</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>HTML 5</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>
-
-                    <div class="skill-item padd-15">
-                      <h5>CSS 3</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="personal-info padd-15">
-
-                  <h3 class="title">Personal Info</h3>
-
-                  <div class="row">
-                    <div class="info-item padd-15">
-                      <p>Birthday : <span>31 julio 1997.</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Age : <span>26 years old.</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Nationality : <span>Argentina.</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>City : <span>Autonomous City of Buenos Aires (CABA).</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>E-Mail : <span>matiasagustincaceres@hotmail.com.</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Phone : <span>+54 9 11-6920-9880.</span></p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-          </div>
+          </ul>
 
         </div>
 
-      </section>
-      <!--------------- About Section End ------------------>
+      </div>
 
-      <!--------------- Portfolio Section Start ------------------>
-      <section class="portfolio section" id="portfolio">
+    </div>
 
-        <div class="container">
+    <div class="timeline">
 
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Portfolio</h2>
-            </div>
-          </div>
+      <div class="timeline-item">
 
-          <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>My Last Proyects :</h2>
-            </div>
-          </div>
+        <h3>
+          Full-Stack Developer in Penta Consulting
+        </h3>
 
-          <div class="row">
+        <span>
+          October 2022 - May 2023
+        </span>
 
-            <!--------------- Portfolio item start ------------------>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="/Contenido multimedia/Imgs/Captura de pantalla 2022-03-16 151409.png" alt="">
-                </div>
-              </div>
-            </div>
-            <!--------------- Portfolio item end ------------------>
+        <p>
 
-            <!--------------- Portfolio item start ------------------>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="/Contenido multimedia/Imgs/Captura de pantalla 2022-03-16 151409.png" alt="">
-                </div>
-              </div>
-            </div>
-            <!--------------- Portfolio item end ------------------>
+          During my time at Penta Consulting, I was part of the development team responsible for managing and customizing
+          Microsoft CRM for the company's clients.
 
-            <!--------------- Portfolio item start ------------------>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="/Contenido multimedia/Imgs/Captura de pantalla 2022-03-16 151409.png" alt="">
-                </div>
-              </div>
-            </div>
-            <!--------------- Portfolio item end ------------------>
+        </p>
 
-            <!--------------- Portfolio item start ------------------>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="/Contenido multimedia/Imgs/Captura de pantalla 2022-03-16 151409.png" alt="">
-                </div>
-              </div>
-            </div>
-            <!--------------- Portfolio item end ------------------>
+        <div class="experience-group">
 
-            <!--------------- Portfolio item start ------------------>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="/Contenido multimedia/Imgs/Captura de pantalla 2022-03-16 151409.png" alt="">
-                </div>
-              </div>
-            </div>
-            <!--------------- Portfolio item end ------------------>
+          <h4>
+            Frontend Development (JavaScript):
+          </h4>
 
-            <!--------------- Portfolio item start ------------------>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="/Contenido multimedia/Imgs/Captura de pantalla 2022-03-16 151409.png" alt="">
-                </div>
-              </div>
-            </div>
-            <!--------------- Portfolio item end ------------------>
+          <ul>
 
-          </div>
+            <li>
+              Customizing the user interface.
+            </li>
+
+            <li>
+              Fetch and Odata queries.
+            </li>
+
+          </ul>
 
         </div>
 
-      </section>
-      <!--------------- Portfolio Section End ------------------>
+        <div class="experience-group">
 
-      <!--------------- Contact start ------------------>
-      <section class="contact section" id="contact">
+          <h4>
+            Backend Development (C#):
+          </h4>
 
-        <div class="container">
+          <ul>
 
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Contact Me</h2>
-            </div>
-          </div>
+            <li>
+               Database query.
+            </li>
 
-          <h3 class="contact-title">Have You Any Question ?</h3>
-          <h4 class="contact-sub-title">I am at your Service</h4>
+            <li>
+              Plugin Development.
+            </li>
 
-          <div class="row">
+            <li>
+               Desarrollo de Consolas.
+            </li>
 
-            <!--------------- Contact info item start ------------------>
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fa fa-phone"></i></div>
-              <h4>Call me</h4>
-              <p>+54 9 11-6920-9880</p>
-            </div>
-            <!--------------- Contact info item end ------------------>
-
-            <!--------------- Contact info item start ------------------>
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fa fa-envelope"></i></div>
-              <h4>E-Mail</h4>
-              <p>matiasagustincaceres@hotmail.com</p>
-            </div>
-            <!--------------- Contact info item end ------------------>
-
-            <!--------------- Contact info item start ------------------>
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <a href="https://www.linkedin.com/in/mat%C3%ADas-c%C3%A1ceres/" target="_blank"><i class="fa fa-brands fa-linkedin-in"></i></a>
-              </div>
-              <h4>Linked In</h4>
-            </div>
-            <!--------------- Contact info item end ------------------>
-
-            <!--------------- Contact info item start ------------------>
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <a href="https://github.com/MatiasAgustinCaceres" target="_blank"><i class="fa fa-brands fa-github"></i></a>
-              </div>
-              <h4>Github</h4>
-            </div>
-            <!--------------- Contact info item end ------------------>
-
-          </div>
+          </ul>
 
         </div>
 
-      </section>
-      <!--------------- Contact end ------------------>
+      </div>
 
     </div>
-    <!--------------- Main Content End ------------------>
 
-  </div>
-  <!--------------- Main Container End ------------------>
+  </section>
 
-  <!--------------- Style Switcher Start ------------------>
-  <div class="style-switcher">
+  <!-- EDUCATION -->
+  <section
+    id="education"
+    class="section container"
+  >
 
-    <div class="style-switcher-toggler s-icon">
-      <i class="fas fa-cog fa-spin"></i>
+    <h2 class="section-title">
+      Education
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>
+          Software Engineering
+        </h3>
+
+        <p>
+          Universidad de Buenos Aires
+        </p>
+
+        <span>
+          August 2017 - Present
+        </span>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          Backend Development Career
+        </h3>
+
+        <p>
+          CoderHouse, CABA
+        </p>
+
+        <span>
+          July 2025 - Present
+        </span>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          Side-by-Side Course 4.0 Full-Stack
+        </h3>
+
+        <p>
+          Ministerio de la Ciudad de Buenos Aires, CABA
+        </p>
+
+        <span>
+          August 2021 - Diciembre 2021
+        </span>
+
+      </div>
+
     </div>
 
-    <div class="day-night s-icon">
-      <i class="fas "></i>
+  </section>
+
+  <!-- SKILLS -->
+<section
+  id="skills"
+  class="section container"
+>
+
+  <h2 class="section-title">
+    Skills
+  </h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3>SAP CPI</h3>
+      <p>(Advanced)</p>
     </div>
 
-    <h4>Theme Colors</h4>
+    <div class="skill-card">
+      <h3>ABAP 7.40</h3>
+      <p>(Intermediate)</p>
+    </div>
 
-    <div class="colors">
-      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    <div class="skill-card">
+      <h3>OOP</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Java</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>JavaScript</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>C#</h3>
+      <p>(Intermediate)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>SQL</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>HTML5</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>CSS3</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Git/GitHub</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Postman</h3>
+      <p>(Advanced)</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>English</h3>
+      <p>(Advanced)</p>
     </div>
 
   </div>
-  <!--------------- Style Switcher End ------------------>
 
-  <!--------------- JS Files ------------------>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-  <script src="Js/script.js"></script>
-  <script src="Js/style-switcher.js"></script>
+</section>
+
+  <!-- CONTACT -->
+<section
+  id="contact"
+  class="section container"
+>
+
+  <h2 class="section-title">
+    Contact
+  </h2>
+
+  <div class="contact-grid">
+
+    <!-- LINKEDIN -->
+    <a
+      href="https://www.linkedin.com/in/mat%C3%ADas-c%C3%A1ceres/"
+      target="_blank"
+      class="contact-card"
+    >
+
+      <i class="fa-brands fa-linkedin"></i>
+
+      <h3>LinkedIn</h3>
+
+      <p>
+        Connect with me professionally
+      </p>
+
+    </a>
+
+    <!-- GITHUB -->
+    <a
+      href="https://github.com/MatiasAgustinCaceres"
+      target="_blank"
+      class="contact-card"
+    >
+
+      <i class="fa-brands fa-github"></i>
+
+      <h3>GitHub</h3>
+
+      <p>
+        View my projects and repositories
+      </p>
+
+    </a>
+
+    <!-- EMAIL -->
+    <div class="contact-card">
+
+      <i class="fa-solid fa-envelope"></i>
+
+      <h3>Email</h3>
+
+      <p>
+        matiasagustincaceres@hotmail.com
+      </p>
+
+    </div>
+
+    <!-- PHONE -->
+    <div class="contact-card">
+
+      <i class="fa-solid fa-phone"></i>
+
+      <h3>Phone</h3>
+
+      <p>
+        +54 9 11 6920 9880
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <p>
+      © 2026 Matías Cáceres.
+      All rights reserved.
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="./js/theme.js"></script>
+
+  <script src="./js/navigation.js"></script>
+
+  <script src="./js/app.js"></script>
 
 </body>
 
