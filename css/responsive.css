@@ -1,0 +1,60 @@
+@media (max-width: 900px) {
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+
+    margin: 1rem 0;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+}
