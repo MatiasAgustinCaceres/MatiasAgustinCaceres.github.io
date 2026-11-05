@@ -1,17 +1,6 @@
-window.addEventListener('scroll', () => {
-
-  const header =
-    document.querySelector('.header');
-
-  if (window.scrollY > 50) {
-
-    header.style.background =
-      'rgba(15, 23, 42, 0.8)';
-
-  } else {
-
-    header.style.background =
-      'rgba(255,255,255,0.05)';
+document.addEventListener('DOMContentLoaded', () => {
+  // Inicialización de íconos Lucide
+  if (window.lucide) {
+    lucide.createIcons();
   }
-
 });

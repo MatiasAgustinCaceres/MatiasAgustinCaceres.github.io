@@ -1,572 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>Matías Cáceres | Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/themes.css">
-
-  <link rel="stylesheet" href="./css/style.css">
-
-  <link rel="stylesheet" href="./css/responsive.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matías Agustín Cáceres | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
+  <div class="layout">
+    <!-- Navbar Superior Fijo y Traslúcido -->
+    <header class="navbar">
+      <div class="profile-container">
+        <img src="assets/images/profile.jpg" alt="Matías Agustín Cáceres" class="profile-img" onerror="this.src='https://via.placeholder.com/120'" />
+        <div class="profile-info">
+          <h1 class="profile-name">Matías Cáceres</h1>
+          <p class="profile-title">Software Developer</p>
+        </div>
+      </div>
 
-  <!-- HEADER -->
-  <header class="header">
-
-    <nav class="navbar container">
-
-      <!-- LOGO -->
-      <a href="#" class="logo">
-        Matías Cáceres
-      </a>
-
-      <!-- NAVIGATION -->
-      <ul class="nav-links">
-
-        <li>
-          <a href="#about">About Me</a>
-        </li>
-
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-
-        <li>
-          <a href="#education">Education</a>
-        </li>
-
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-
-      </ul>
-
-      <!-- THEME BUTTON -->
-      <button
-        id="theme-toggle"
-        class="theme-btn"
-      >
-        <i class="fa-solid fa-moon"></i>
-      </button>
-
-    </nav>
-
-  </header>
-
-  <!-- HERO -->
-  <section class="hero container">
-
-    <div class="hero-content">
-
-      <p class="subtitle">
-        Software Developer
-      </p>
-
-      <h1>
-        Hi, I'm
-        <span>Matías Cáceres</span>
-      </h1>
-
-      <p class="hero-description">
-
-        Passionate developer focused on building modern,
-        scalable and user-friendly applications.
-
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="#contact"
-          class="btn primary-btn"
-        >
-          Contact Me
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">
+          <i data-lucide="user"></i> <span>About Me</span>
         </a>
+        <a href="#experience" class="nav-link">
+          <i data-lucide="briefcase"></i> <span>Experience</span>
+        </a>
+        <a href="#skills" class="nav-link">
+          <i data-lucide="code"></i> <span>Skills</span>
+        </a>
+        <a href="#education" class="nav-link">
+          <i data-lucide="graduation-cap"></i> <span>Education</span>
+        </a>
+        <a href="#contact" class="nav-link">
+          <i data-lucide="mail"></i> <span>Contact</span>
+        </a>
+      </nav>
 
-        <a href="./assets/files/Resume 2026.pdf" class="btn secondary-btn" target="_blank"> Resume </a>
-
+      <div class="navbar-actions">
+        <a href="assets/files/Resume 2026.pdf" download class="btn-download">
+          <i data-lucide="download"></i> Download CV
+        </a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
       </div>
+    </header>
 
-    </div>
+    <!-- Main Content Area -->
+    <main class="content">
+      
+      <!-- About Me Section -->
+      <section id="about" class="landing-section">
+        <h2>About Me</h2>
+        <div class="card">
+          <p class="about-text">
+            Software Engineering student at UBA with professional experience as a Full-Stack and Packaged App Developer at companies like Accenture and Penta Consulting. Specialized in designing scalable applications, enterprise integrations, and modern software solutions. Driven by continuous improvement and collaborative teamwork, I am eager to bring my technical background to dynamic and innovative environments.
+          </p>
+        </div>
+      </section>
 
-    <!-- PROFILE IMAGE -->
-    <div class="hero-image">
+      <!-- Experience Section -->
+      <section id="experience" class="landing-section">
+        <h2>Experience</h2>
+        <div class="experience-timeline">
+          
+          <!-- Accenture Card -->
+          <div class="card experience-card">
+            <div class="exp-header">
+              <div class="exp-role-company">
+                <h3>Packaged App Development Analyst</h3>
+                <span class="company-name">Accenture</span>
+              </div>
+              <span class="date-badge">October 2023 - Present</span>
+            </div>
+            
+            <p class="intro-text">
+              Working within agile Scrum methodologies, I gained solid experience across the entire development lifecycle cooperating directly with Product Owners and functional teams from requirements gathering to delivery. I was also responsible for researching tools to boost team productivity and exploring ways to integrate Artificial Intelligence for automated task optimization.
+            </p>
+            
+            <div class="exp-sub-grids">
+              <div class="sub-block">
+                <h4 class="sub-title"><i data-lucide="layers"></i> BTP Integrations</h4>
+                <ul>
+                  <li>Design and maintenance of system integrations using SAP Integration Suite under SOA principles.</li>
+                  <li>In charge of sector developments, handling maintenance tasks and implementing new functionalities.</li>
+                  <li>Collaborated closely with the quality assurance team, providing dedicated support during testing.</li>
+                  <li>Conducted training and technical onboarding for new team members joining the sector.</li>
+                </ul>
+              </div>
 
-      <img
-        src="./assets/images/profile.jpg"
-        alt="Profile Image"
-      >
+              <div class="sub-block">
+                <h4 class="sub-title"><i data-lucide="code-2"></i> BTP RAP</h4>
+                <ul>
+                  <li>Developed Fiori applications utilizing the ABAP RESTful Application Programming Model (RAP).</li>
+                  <li>Built optimized database queries for advanced information management and service delivery.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-    </div>
+          <!-- Penta Consulting Card -->
+          <div class="card experience-card">
+            <div class="exp-header">
+              <div class="exp-role-company">
+                <h3>Full-Stack Developer</h3>
+                <span class="company-name">Penta Consulting</span>
+              </div>
+              <span class="date-badge">October 2022 - May 2023</span>
+            </div>
+            
+            <p class="intro-text">
+              As part of the development team at Penta Consulting, I specialized in the customization, configuration, and management of Microsoft CRM solutions tailored to client requirements.
+            </p>
+            
+            <div class="exp-sub-grids">
+              <div class="sub-block">
+                <h4 class="sub-title"><i data-lucide="layout"></i> Frontend Development (JavaScript)</h4>
+                <ul>
+                  <li>Customized user interfaces to align with client-specific business needs.</li>
+                  <li>Executed efficient data retrieval via Fetch and OData queries.</li>
+                </ul>
+              </div>
 
-  </section>
-
-  <!-- ABOUT -->
-  <section
-    id="about"
-    class="section container"
-  >
-
-    <h2 class="section-title">
-      About Me
-    </h2>
-
-    <div class="card">
-
-      <p>
-
-        I am an Software Engineering student at
-        the University of Buenos Aires (UBA) with experience
-        in software development and business solutions.
-
-        Throughout my professional journey, I have worked as
-        a Packaged App Development Analyst at Accenture and
-        as a Full-Stack Developer at Penta Consulting,
-        participating in the development of modern applications,
-        integrations, and scalable solutions.
-
-        I am currently looking for opportunities where I can
-        continue learning, take on new challenges, and grow
-        professionally within collaborative and innovative teams.
-
-        I consider myself a proactive, responsible, and
-        collaborative person, always focused on continuous
-        improvement and delivering high-quality solutions.
-
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section
-    id="experience"
-    class="section container"
-  >
-
-    <h2 class="section-title">
-      Experience
-    </h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-
-        <h3>
-          Packaged App Development in Accenture
-        </h3>
-
-        <span>
-          October 2023 - Present
-        </span>
-
-        <p>
-
-          During my time at Accenture, I was part of the
-          BTP RAP and BTP Integrations teams.
-
-          In both teams, I worked using agile methodologies
-          (Scrum), actively participating in sprints,
-          reviews, and incremental releases.
-
-          I was also responsible for researching tools aimed
-          at improving team productivity and ways to integrate
-          Artificial Intelligence to optimize tasks,
-          automate processes, and improve efficiency in
-          development and integration activities.
-
-        </p>
-
-        <!-- BTP RAP -->
-        <div class="experience-group">
-
-          <h4>
-            BTP RAP
-          </h4>
-
-          <ul>
-
-            <li>
-              Fiori application development using the
-              ABAP RESTful Application Programming Model (RAP)
-            </li>
-
-            <li>
-              Development of database queries for information
-              management and service presentation
-            </li>
-
-          </ul>
+              <div class="sub-block">
+                <h4 class="sub-title"><i data-lucide="server"></i> Backend Development (C#)</h4>
+                <ul>
+                  <li>Executed database queries and built robust server-side logic.</li>
+                  <li>Developed custom plugins and automated console applications for backend processes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
         </div>
+      </section>
 
-        <!-- BTP Integrations -->
-        <div class="experience-group">
+      <!-- Skills Section -->
+      <section id="skills" class="landing-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          
+          <a href="assets/files/Certificación CPI.pdf" target="_blank" class="skill-card cert-item">
+            <strong>SAP Int. Suite</strong>
+            <span class="level">(Advanced)</span>
+            <span class="cert-badge"><i data-lucide="award"></i> View Certificate</span>
+          </a>
 
-          <h4>
-            BTP Integrations
-          </h4>
+          <div class="skill-card">
+            <strong>ABAP 7.40</strong>
+            <span class="level">(Intermediate)</span>
+          </div>
 
-          <ul>
+          <a href="assets/files/Certificado JS.pdf" target="_blank" class="skill-card cert-item">
+            <strong>JavaScript</strong>
+            <span class="level">(Advanced)</span>
+            <span class="cert-badge"><i data-lucide="award"></i> View Certificate</span>
+          </a>
 
-            <li>
-              Design and maintenance of integrations between
-              SAP and non-SAP systems using SAP Integration Suite
-            </li>
+          <a href="assets/files/Certificado Backend I.pdf" target="_blank" class="skill-card cert-item">
+            <strong>NodeJS</strong>
+            <span class="level">(Intermediate)</span>
+            <span class="cert-badge"><i data-lucide="award"></i> View Certificate</span>
+          </a>
 
-            <li>
-              Application of service-oriented architecture
-              (SOA) principles
-            </li>
+          <div class="skill-card">
+            <strong>OOP</strong>
+            <span class="level">(Advanced)</span>
+          </div>
 
-          </ul>
+          <div class="skill-card">
+            <strong>Java</strong>
+            <span class="level">(Advanced)</span>
+          </div>
 
-        </div>
+          <a href="assets/files/Certificado SQL.pdf" target="_blank" class="skill-card cert-item">
+            <strong>SQL</strong>
+            <span class="level">(Advanced)</span>
+            <span class="cert-badge"><i data-lucide="award"></i> View Certificate</span>
+          </a>
 
-      </div>
+          <a href="assets/files/Certificado__Programaci_n_Backend_III_.pdf" target="_blank" class="skill-card cert-item">
+            <strong>Docker</strong>
+            <span class="level">(Intermediate)</span>
+            <span class="cert-badge"><i data-lucide="award"></i> View Certificate</span>
+          </a>
 
-    </div>
+          <a href="assets/files/Certificado Ingles.pdf" target="_blank" class="skill-card cert-item">
+            <strong>English</strong>
+            <span class="level">(Advanced)</span>
+            <span class="cert-badge"><i data-lucide="award"></i> View Certificate</span>
+          </a>
 
-    <div class="timeline">
+          <div class="skill-card">
+            <strong>Git / GitHub</strong>
+            <span class="level">(Advanced)</span>
+          </div>
 
-      <div class="timeline-item">
+          <div class="skill-card">
+            <strong>HTML5 / CSS3</strong>
+            <span class="level">(Advanced)</span>
+          </div>
 
-        <h3>
-          Full-Stack Developer in Penta Consulting
-        </h3>
-
-        <span>
-          October 2022 - May 2023
-        </span>
-
-        <p>
-
-          During my time at Penta Consulting, I was part of the development team responsible for managing and customizing
-          Microsoft CRM for the company's clients.
-
-        </p>
-
-        <div class="experience-group">
-
-          <h4>
-            Frontend Development (JavaScript):
-          </h4>
-
-          <ul>
-
-            <li>
-              Customizing the user interface.
-            </li>
-
-            <li>
-              Fetch and Odata queries.
-            </li>
-
-          </ul>
-
-        </div>
-
-        <div class="experience-group">
-
-          <h4>
-            Backend Development (C#):
-          </h4>
-
-          <ul>
-
-            <li>
-               Database query.
-            </li>
-
-            <li>
-              Plugin Development.
-            </li>
-
-            <li>
-               Desarrollo de Consolas.
-            </li>
-
-          </ul>
+          <div class="skill-card">
+            <strong>C#</strong>
+            <span class="level">(Intermediate)</span>
+          </div>
 
         </div>
+      </section>
 
-      </div>
+      <!-- Education Section (Backend Development Career con un único enlace a diploma) -->
+      <section id="education" class="landing-section">
+        <h2>Education</h2>
+        <div class="cards-row">
+          
+          <div class="card edu-card">
+            <div class="edu-content">
+              <h3>Software Engineering</h3>
+              <p class="institution">Universidad de Buenos Aires</p>
+              <span class="date-text">August 2017 - Present</span>
+            </div>
+          </div>
 
-    </div>
+          <a href="assets/files/Certificado Carrera Backend.pdf" target="_blank" class="card edu-card cert-card">
+            <div class="edu-content">
+              <h3>Backend Development Career</h3>
+              <p class="institution">CoderHouse, CABA</p>
+              <span class="date-text">July 2025 - September 2026</span>
+            </div>
+            <span class="cert-badge-card"><i data-lucide="file-text"></i> View Diploma</span>
+          </a>
 
-  </section>
+          <a href="assets/files/Caceres Matias Agustin diploma.pdf" target="_blank" class="card edu-card cert-card">
+            <div class="edu-content">
+              <h3>Side-by-Side Course 4.0 Full-Stack</h3>
+              <p class="institution">Ministerio de la Ciudad de Buenos Aires, CABA</p>
+              <span class="date-text">August 2021 - Diciembre 2021</span>
+            </div>
+            <span class="cert-badge-card"><i data-lucide="file-text"></i> View Diploma</span>
+          </a>
 
-  <!-- EDUCATION -->
-  <section
-    id="education"
-    class="section container"
-  >
+        </div>
+      </section>
 
-    <h2 class="section-title">
-      Education
-    </h2>
+      <!-- Contact Section -->
+      <section id="contact" class="landing-section">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          
+          <a href="https://www.linkedin.com/in/mat%C3%ADas-c%C3%A1ceres/" target="_blank" class="contact-card">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally</p>
+          </a>
 
-    <div class="grid">
+          <a href="https://github.com/MatiasAgustinCaceres" target="_blank" class="contact-card">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <h3>GitHub</h3>
+            <p>View my projects and repositories</p>
+          </a>
 
-      <div class="card">
+          <a href="mailto:matiasagustincaceres@hotmail.com" class="contact-card">
+            <i data-lucide="mail" class="contact-icon"></i>
+            <h3>Email</h3>
+            <p>matiasagustincaceres@hotmail.com</p>
+          </a>
 
-        <h3>
-          Software Engineering
-        </h3>
+          <a href="tel:+5491169209880" class="contact-card">
+            <i data-lucide="phone" class="contact-icon"></i>
+            <h3>Phone</h3>
+            <p>+54 9 11 6920 9880</p>
+          </a>
 
-        <p>
-          Universidad de Buenos Aires
-        </p>
+        </div>
+      </section>
 
-        <span>
-          August 2017 - Present
-        </span>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          Backend Development Career
-        </h3>
-
-        <p>
-          CoderHouse, CABA
-        </p>
-
-        <span>
-          July 2025 - Present
-        </span>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          Side-by-Side Course 4.0 Full-Stack
-        </h3>
-
-        <p>
-          Ministerio de la Ciudad de Buenos Aires, CABA
-        </p>
-
-        <span>
-          August 2021 - Diciembre 2021
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SKILLS -->
-<section
-  id="skills"
-  class="section container"
->
-
-  <h2 class="section-title">
-    Skills
-  </h2>
-
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <h3>SAP CPI</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>ABAP 7.40</h3>
-      <p>(Intermediate)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>OOP</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Java</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>JavaScript</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>C#</h3>
-      <p>(Intermediate)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>SQL</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>HTML5</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>CSS3</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Git/GitHub</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Postman</h3>
-      <p>(Advanced)</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>English</h3>
-      <p>(Advanced)</p>
-    </div>
-
+    </main>
   </div>
 
-</section>
-
-  <!-- CONTACT -->
-<section
-  id="contact"
-  class="section container"
->
-
-  <h2 class="section-title">
-    Contact
-  </h2>
-
-  <div class="contact-grid">
-
-    <!-- LINKEDIN -->
-    <a
-      href="https://www.linkedin.com/in/mat%C3%ADas-c%C3%A1ceres/"
-      target="_blank"
-      class="contact-card"
-    >
-
-      <i class="fa-brands fa-linkedin"></i>
-
-      <h3>LinkedIn</h3>
-
-      <p>
-        Connect with me professionally
-      </p>
-
-    </a>
-
-    <!-- GITHUB -->
-    <a
-      href="https://github.com/MatiasAgustinCaceres"
-      target="_blank"
-      class="contact-card"
-    >
-
-      <i class="fa-brands fa-github"></i>
-
-      <h3>GitHub</h3>
-
-      <p>
-        View my projects and repositories
-      </p>
-
-    </a>
-
-    <!-- EMAIL -->
-    <div class="contact-card">
-
-      <i class="fa-solid fa-envelope"></i>
-
-      <h3>Email</h3>
-
-      <p>
-        matiasagustincaceres@hotmail.com
-      </p>
-
-    </div>
-
-    <!-- PHONE -->
-    <div class="contact-card">
-
-      <i class="fa-solid fa-phone"></i>
-
-      <h3>Phone</h3>
-
-      <p>
-        +54 9 11 6920 9880
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <p>
-      © 2026 Matías Cáceres.
-      All rights reserved.
-    </p>
-
-  </footer>
-
-  <!-- JS -->
-  <script src="./js/theme.js"></script>
-
-  <script src="./js/navigation.js"></script>
-
-  <script src="./js/app.js"></script>
-
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
 </body>
-
 </html>

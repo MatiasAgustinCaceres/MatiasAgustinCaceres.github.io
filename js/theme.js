@@ -1,36 +1,16 @@
-const themeToggle =
-  document.getElementById('theme-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const html = document.documentElement;
 
-const savedTheme =
-  localStorage.getItem('theme');
-
-if (savedTheme === 'dark') {
-  document.body.classList.add('dark-theme');
-}
-
-function updateThemeIcon() {
-
-  const isDark =
-    document.body.classList.contains('dark-theme');
-
-  themeToggle.innerHTML = isDark
-    ? '<i class="fa-solid fa-sun"></i>'
-    : '<i class="fa-solid fa-moon"></i>';
-}
-
-updateThemeIcon();
-
-themeToggle.addEventListener('click', () => {
-
-  document.body.classList.toggle('dark-theme');
-
-  const isDark =
-    document.body.classList.contains('dark-theme');
-
-  localStorage.setItem(
-    'theme',
-    isDark ? 'dark' : 'light'
-  );
-
-  updateThemeIcon();
+  themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    
+    // Al cambiar dinámicamente de tema, refresca Lucide para asegurarse de renderizar los iconos correctamente si fuese necesario
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  });
 });
