@@ -1,57 +1,69 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.landing-section');
-  let isScrolling = false;
-  let scrollTimeout;
 
-  function setActiveLink(id) {
-    navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-    });
-  }
+  if (navLinks.length === 0 || sections.length === 0) return;
 
-  // Al hacer clic en el menú, marcamos inmediatamente el enlace activo
-  // y bloqueamos temporalmente los detectores automáticos durante el desplazamiento.
+  // Función directa para iluminar únicamente el enlace que coincida con el ID
+  function highlightNav(id) {
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      isScrolling = true;
-      const targetId = link.getAttribute('href').substring(1);
-      setActiveLink(targetId);
+    const isActive = link.getAttribute('href') === `#${id}`;
+    link.classList.toggle('active', isActive);
 
-      clearTimeout(scrollTimeout);
-      // Reactiva el observer automático después de que termine el scroll (800ms)
-      scrollTimeout = setTimeout(() => {
-        isScrolling = false;
-      }, 800);
-    });
+    if (isActive) {
+      // Solo mueve el scroll horizontal del menú, no el de la página
+      const menu = link.parentElement;
+      menu.scrollTo({
+        left: link.offsetLeft - menu.clientWidth / 2 + link.clientWidth / 2,
+        behavior: 'smooth'
+      });
+    }
   });
+}
 
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -40% 0px',
-    threshold: 0.1
-  };
+  // Lógica pura de posición de scroll
+  function checkScrollPosition() {
+    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+    
+    // Si estás arriba de todo, marcar "about"
+    if (scrollPos < 100) {
+      highlightNav('about');
+      return;
+    }
 
-  const observer = new IntersectionObserver((entries) => {
-    if (isScrolling) return; // Si estamos desplazándonos por un clic, ignorar
+    // Revisar cuál sección está cruzando la línea de visión
+    let activeId = 'about';
+    
+    sections.forEach(section => {
+      // Tomamos la posición superior de cada sección menos una compensación por el navbar
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
 
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        setActiveLink(id);
+      if (scrollPos >= sectionTop && scrollPos < (sectionTop + sectionHeight)) {
+        activeId = section.getAttribute('id');
       }
     });
-  }, observerOptions);
 
-  sections.forEach(section => observer.observe(section));
-
-  // Detección del final absoluto de la página
-  window.addEventListener('scroll', () => {
-    if (isScrolling) return;
-
-    const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 15;
-    if (isAtBottom) {
-      setActiveLink('contact');
+    // Si llegaste al fondo absoluto de la página, forzar "contact"
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollPos >= maxScroll - 30) {
+      activeId = 'contact';
     }
+
+    highlightNav(activeId);
+  }
+
+  // Escuchar el scroll de la ventana
+  window.addEventListener('scroll', checkScrollPosition, { passive: true });
+
+  // Ejecutar inmediatamente al cargar la página para que no arranque vacía
+  checkScrollPosition();
+
+  // Los clics SOLO hacen scroll de forma nativa (o suave), quitando el foco para que no interfieran
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Dejamos que el navegador haga su trabajo de anclaje, pero limpiamos el foco
+      link.blur();
+    });
   });
 });
